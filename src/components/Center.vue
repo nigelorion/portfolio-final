@@ -26,14 +26,20 @@ export default {
 
  .projects {
    display: flex;
-   width: 400px;
-   height: 400px;
-   border: solid 1px red;
+   // width: 400px;
+   // height: 400px;
    flex-wrap: wrap;
+   max-width: 500px;
+
    p {
      color: blue;
-     width: 200px;
-     height: 200px;
+     min-width: 200px;
+     min-height: 200px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: rgb(105, 117, 133);
+     margin: 1%;
    }
  }
 

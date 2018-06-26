@@ -31,6 +31,10 @@ body {
   display: flex;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,14 +45,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-// .main {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   .sections {
-//     margin: 5px;
-//   }
-// }
+.sections {
+  margin: 5%;
+}
+
 </style>
