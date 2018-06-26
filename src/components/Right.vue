@@ -28,12 +28,12 @@ export default {
    flex-direction: column;
    a {
      margin: 5%;
-     color: rgb(99, 129, 148);
+     color: white;
      text-decoration: none;
      transition: all 350ms;
      &:hover {
-       color: rgb(97, 97, 97);
-       margin-left: 10%;
+       color: grey;
+       background-color: white;
      }
    }
  }

@@ -29,6 +29,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  background-color: rgb(105, 131, 127);
 }
 
 * {
@@ -40,13 +41,12 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(79, 79, 79);
+  color: rgb(208, 221, 233);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .sections {

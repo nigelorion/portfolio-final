@@ -52,6 +52,9 @@ export default {
    max-width: 500px;
    max-height: 500px;
    transform: rotate(45deg);
+   @media(max-width: 700px) {
+     transform: rotate(0deg);
+   }
 
     .projectWrapper {
      // min-width: 200px;
@@ -63,10 +66,8 @@ export default {
      align-items: center;
      flex-direction: column;
      // background-color: rgb(105, 117, 133);
+     border: solid 1px white;
      margin: 1%;
-     p {
-        color: grey;
-     }
      a {
        opacity: 0;
        transition: 500ms;
@@ -80,27 +81,28 @@ export default {
      &:hover {
        transform: rotate(-45deg);
        background: linear-gradient(313deg, #7fe7f6, #d27778);
- background-size: 400% 400%;
+       border: none;
+       background-size: 400% 400%;
 
- -webkit-animation: AnimationName 4s ease infinite;
- -moz-animation: AnimationName 4s ease infinite;
- animation: AnimationName 4s ease infinite;
+       -webkit-animation: AnimationName 4s ease infinite;
+       -moz-animation: AnimationName 4s ease infinite;
+       animation: AnimationName 4s ease infinite;
 
- @-webkit-keyframes AnimationName {
-     0%{background-position:0% 38%}
-     50%{background-position:100% 63%}
-     100%{background-position:0% 38%}
- }
- @-moz-keyframes AnimationName {
-     0%{background-position:0% 38%}
-     50%{background-position:100% 63%}
-     100%{background-position:0% 38%}
- }
- @keyframes AnimationName {
-     0%{background-position:0% 38%}
-     50%{background-position:100% 63%}
-     100%{background-position:0% 38%}
- }
+       @-webkit-keyframes AnimationName {
+           0%{background-position:0% 38%}
+           50%{background-position:100% 63%}
+           100%{background-position:0% 38%}
+       }
+       @-moz-keyframes AnimationName {
+           0%{background-position:0% 38%}
+           50%{background-position:100% 63%}
+           100%{background-position:0% 38%}
+       }
+       @keyframes AnimationName {
+           0%{background-position:0% 38%}
+           50%{background-position:100% 63%}
+           100%{background-position:0% 38%}
+       }
       }
      &:hover > a {
        opacity: 1;
