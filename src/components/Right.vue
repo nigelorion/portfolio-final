@@ -28,7 +28,7 @@ export default {
    flex-direction: column;
    a {
      margin: 5%;
-     color: rgb(110, 38, 53);
+     color: rgb(99, 129, 148);
      text-decoration: none;
      transition: all 350ms;
      &:hover {

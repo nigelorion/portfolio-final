@@ -33,6 +33,7 @@ body {
 
 * {
   box-sizing: border-box;
+  transition: all 400ms;
 }
 
 #app {
