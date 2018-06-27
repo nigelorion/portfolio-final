@@ -1,36 +1,36 @@
 <template>
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <div id="app">
-    <div class="title">
+    <div class="title sections">
       <h1>nigel orion</h1>
-      <p>web developer.</p>
-      <p>portland, oregon</p>
+      <p>web developer</p>
+      <p>pdx</p>
       <button v-on:click="aboutToggle()" type="button" name="button">about</button>
       <button v-on:click="portfolioToggle()" type="button" name="button">portfolio</button>
     </div>
-    <div class="aboutAndPortfolio">
+    <div class="aboutAndPortfolio sections">
       <transition name="slide-fade" mode="out-in">
-        <Center v-if="portfolioState" class="sections"/>
-      </transition>
-      <transition name="slide-fade" mode="out-in">
-        <About v-if="aboutState" class="sections"/>
+        <Center v-if="portfolioState"/>
+        <About v-if="aboutState"/>
       </transition>
     </div>
-    <Right class="sections"/>
+    <div class="contact sections">
+      <a href="#">github</a>
+      <a href="#">linkedin</a>
+      <a href="#">email</a>
+    </div>
   </div>
 </template>
 
 <script>
 
 import Center from './components/Center.vue'
-import Right from './components/Right.vue'
 import About from './components/About.vue'
 
 export default {
   name: 'app',
   components: {
     Center,
-    Right,
     About
   },
   data () {
@@ -76,27 +76,59 @@ body {
   font-family:'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(208, 221, 233);
+  color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media(max-width: 700px) {
+    flex-direction: column;
+  }
 }
 
-.sections, .title {
-  margin: 5%;
+
+button {
+  background-color: white;
+  border: none;
+  margin: 5px;
+  &:hover {
+    background-color: rgb(114, 174, 254);
+    color: white;
+  }
 }
 
 .slide-fade-enter-active {
-  transition: all .8s ease;
+  transition: all 1.3s ease;
 }
 .slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all;
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(30px);
+  // transform: translateX(40px);
   opacity: 0;
 }
+
+.contact {
+  order: 2;
+  @media(min-width: 700px) {
+    order: 3;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    transition: all 350ms;
+    display: block;
+    &:hover {
+      color: grey;
+      background-color: white;
+    }
+  }
+}
+
+.sections {
+  margin: 10px;
+}
+
 </style>

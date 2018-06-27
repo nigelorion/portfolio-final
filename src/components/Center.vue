@@ -48,10 +48,11 @@ export default {
    flex-wrap: wrap;
    max-width: 500px;
    max-height: 500px;
-   transform: rotate(45deg);
-   @media(max-width: 700px) {
-     transform: rotate(0deg);
-   }
+   justify-content: center;
+   // transform: rotate(45deg);
+   // @media(max-width: 700px) {
+   //   transform: rotate(0deg);
+   // }
 
     .projectWrapper {
      // min-width: 200px;
@@ -76,7 +77,7 @@ export default {
        }
      }
      &:hover {
-       transform: rotate(-45deg);
+       // transform: rotate(-45deg);
        background: linear-gradient(313deg, #7fe7f6, #d27778);
        border: none;
        background-size: 400% 400%;
