@@ -1,28 +1,18 @@
 <template>
   <div class="main">
     <div class="projects">
-      <div class="projectWrapper">
-        <p>hbailey</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
+      <div class="projectWrapper one">
 
       </div>
-      <div class="projectWrapper">
-        <p>hunt</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
+      <div class="projectWrapper two">
+        <h3>officia deserunt mollit anim id est laborum.</h3>
 
       </div>
-      <div class="projectWrapper">
-        <p>starwarsapi</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
+      <div class="projectWrapper three">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
 
       </div>
-      <div class="projectWrapper">
-        <p>flipperapp</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
+      <div class="projectWrapper four">
 
       </div>
     </div>
@@ -31,7 +21,7 @@
 
 <script>
 export default {
-  name: 'Center'
+  name: 'About'
 }
 </script>
 
@@ -77,7 +67,7 @@ export default {
      }
      &:hover {
        transform: rotate(-45deg);
-       background: linear-gradient(313deg, #7fe7f6, #d27778);
+       background: linear-gradient(313deg, #a6bd5a, #6d24b6);
        border: none;
        background-size: 400% 400%;
 
@@ -107,4 +97,14 @@ export default {
    }
  }
 
+.three p {
+  transform: rotate(-45deg);
+  // &:hover {
+  //   transform: rotate(0deg);
+  // }
+}
+
+.three:hover > p {
+  transform: rotate(360deg);
+}
 </style>
