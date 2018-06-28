@@ -29,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: rgb(105, 131, 127);
+  background-color: #334e52;
 }
 
 * {
