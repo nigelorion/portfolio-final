@@ -2,11 +2,11 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <div id="app">
     <div class="title sections">
+      <button v-on:click="aboutToggle()" type="button" name="button">about</button>
+      <button v-on:click="portfolioToggle()" type="button" name="button">portfolio</button>
       <h1>nigel orion</h1>
       <p>web developer</p>
       <p>pdx</p>
-      <button v-on:click="aboutToggle()" type="button" name="button">about</button>
-      <button v-on:click="portfolioToggle()" type="button" name="button">portfolio</button>
     </div>
     <div class="aboutAndPortfolio sections">
       <transition name="slide-fade" mode="out-in">
@@ -64,7 +64,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: rgb(23, 23, 23);
+  background-color: rgb(33, 33, 33);
 }
 
 * {
@@ -76,7 +76,7 @@ body {
   font-family:'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(255, 255, 255);
+  color: white;
   width: 100%;
   height: 100%;
   display: flex;
@@ -84,17 +84,25 @@ body {
   align-items: center;
   @media(max-width: 700px) {
     flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
 
 button {
-  background-color: white;
-  border: none;
-  margin: 5px;
+  background-color: rgba(37, 60, 187, 0);
+  color: inherit;
+  font-size: 1.1em;
+  margin: 0 0 10px 10px;
+  border-bottom: solid 1px white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  // color:white;
+
   &:hover {
-    background-color: rgb(114, 174, 254);
-    color: white;
+    background-color: white;
+    color: grey;
   }
 }
 
@@ -106,17 +114,22 @@ button {
 }
 .slide-fade-enter, .slide-fade-leave-to
 /* .slide-fade-leave-active below version 2.1.8 */ {
-  // transform: translateX(40px);
+  // transform: translate  // transform: translateX(40px);X(40px);
   opacity: 0;
 }
 
 .contact {
+  border-top: solid 1px grey;
+  border-left: solid 1px grey;
+  padding: 5px;
   order: 2;
+
   @media(min-width: 700px) {
     order: 3;
   }
   a {
-    color: white;
+    color: inherit;
+    width: 80px;
     text-decoration: none;
     transition: all 350ms;
     display: block;
@@ -128,7 +141,20 @@ button {
 }
 
 .sections {
+  min-width: 200px;
+  min-height: 100px;
   margin: 10px;
+  p, h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.title {
+  text-align: right;
+  border-top: solid 1px grey;
+  border-right: solid 1px grey;
+  padding: 5px;
 }
 
 </style>
