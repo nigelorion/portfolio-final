@@ -1,27 +1,62 @@
 <template>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <div id="app">
-    <Left class="sections"/>
-    <Center class="sections"/>
-    <Right class="sections"/>
+    <div class="title sections">
+      <button v-on:click="aboutToggle()" type="button" name="button">about</button>
+      <button v-on:click="portfolioToggle()" type="button" name="button">portfolio</button>
+      <h1>nigel orion</h1>
+      <p>web developer</p>
+      <p>pdx</p>
+    </div>
+    <div class="aboutAndPortfolio sections">
+      <transition name="slide-fade" mode="out-in">
+        <Center v-if="portfolioState"/>
+        <About v-if="aboutState"/>
+      </transition>
+    </div>
+    <div class="contact sections">
+      <a href="#">github</a>
+      <a href="#">linkedin</a>
+      <a href="#">email</a>
+    </div>
   </div>
 </template>
 
 <script>
-import Left from './components/Left.vue'
+
 import Center from './components/Center.vue'
-import Right from './components/Right.vue'
+import About from './components/About.vue'
 
 export default {
   name: 'app',
   components: {
-    Left,
     Center,
-    Right
+    About
+  },
+  data () {
+    return {
+      aboutState: true,
+      portfolioState: false
+    }
+  },
+  methods: {
+    aboutToggle: function () {
+      this.aboutState = true
+      this.portfolioState = false
+
+    },
+    portfolioToggle: function () {
+      this.aboutState = false
+      this.portfolioState = true
+
+    }
   }
 }
 </script>
 
 <style lang="scss">
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 body {
   height: 100vh;
@@ -29,28 +64,95 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: #334e52;
-}
-
+  background-color: rgb(33, 33, 33);
 * {
   box-sizing: border-box;
   transition: all 400ms;
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family:'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: rgb(208, 221, 233);
+  color: white;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  @media(max-width: 700px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+
+button {
+  background-color: rgba(37, 60, 187, 0);
+  color: inherit;
+  font-size: 1.1em;
+  margin: 0 0 10px 10px;
+  border-bottom: solid 1px white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  // color:white;
+
+  &:hover {
+    background-color: white;
+    color: grey;
+  }
+}
+
+.slide-fade-enter-active {
+  transition: all 1.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all;
+}
+.slide-fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active below version 2.1.8 */ {
+  // transform: translate  // transform: translateX(40px);X(40px);
+  opacity: 0;
+}
+
+.contact {
+  border-top: solid 1px grey;
+  border-left: solid 1px grey;
+  padding: 5px;
+  order: 2;
+
+  @media(min-width: 700px) {
+    order: 3;
+  }
+  a {
+    color: inherit;
+    width: 80px;
+    text-decoration: none;
+    transition: all 350ms;
+    display: block;
+    &:hover {
+      color: grey;
+      background-color: white;
+    }
+  }
 }
 
 .sections {
-  margin: 5%;
+  min-width: 200px;
+  min-height: 100px;
+  margin: 10px;
+  p, h1 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.title {
+  text-align: right;
+  border-top: solid 1px grey;
+  border-right: solid 1px grey;
+  padding: 5px;
 }
 
 </style>

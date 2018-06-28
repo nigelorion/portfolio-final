@@ -1,8 +1,9 @@
 <template>
   <div class="main">
     <div class="projects">
-      <div class="projectWrapper">
+      <div class="projectWrapper hbailey">
         <p>hbailey</p>
+        <p>clothing boutique static site built with vuejs</p>
         <a href="#">code</a>
         <a href="#">live</a>
 
@@ -31,10 +32,7 @@
 
 <script>
 export default {
-  name: 'Center',
-  props: {
-    msg: String
-  }
+  name: 'Center'
 }
 </script>
 
@@ -51,10 +49,15 @@ export default {
    flex-wrap: wrap;
    max-width: 500px;
    max-height: 500px;
-   transform: rotate(45deg);
-   @media(max-width: 700px) {
-     transform: rotate(0deg);
+   @media(max-width:700px) {
+     width: 100%;
+     height: 100%;
    }
+   justify-content: center;
+   // transform: rotate(45deg);
+   // @media(max-width: 700px) {
+   //   transform: rotate(0deg);
+   // }
 
     .projectWrapper {
      // min-width: 200px;
@@ -68,6 +71,11 @@ export default {
      // background-color: rgb(105, 117, 133);
      border: solid 1px white;
      margin: 1%;
+     @media(max-width:700px) {
+       width: 250px;
+       height: 250px;
+       margin: 5px;
+     }
      a {
        opacity: 0;
        transition: 500ms;
@@ -75,11 +83,11 @@ export default {
        text-decoration: none;
        &:hover {
          color: grey;
-         margin-right: 10px;
+         background-color: white;
        }
      }
      &:hover {
-       transform: rotate(-45deg);
+       // transform: rotate(-45deg);
        background: linear-gradient(313deg, #7fe7f6, #d27778);
        border: none;
        background-size: 400% 400%;
@@ -109,5 +117,9 @@ export default {
      }
    }
  }
-
+//
+// .hbailey {
+//   background-image: url(../assets/hbaileyimage.png);
+//   background-position: center;
+// }
 </style>
