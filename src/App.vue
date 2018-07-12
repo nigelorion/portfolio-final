@@ -8,7 +8,7 @@
       <p>web developer</p>
       <p>pdx</p>
     </div>
-    <div class="aboutAndPortfolio sections">
+    <div class="center sections">
       <transition name="slide-fade" mode="out-in">
         <Center v-if="portfolioState"/>
         <About v-if="aboutState"/>
@@ -65,6 +65,9 @@ body {
   padding: 0;
   display: flex;
   background-color: rgb(33, 33, 33);
+}
+
+
 * {
   box-sizing: border-box;
   transition: all 400ms;
@@ -78,10 +81,12 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  padding: 5%;
   @media(max-width: 700px) {
     flex-direction: column;
+    height: auto;
     justify-content: flex-start;
   }
 }
@@ -92,12 +97,7 @@ button {
   color: inherit;
   font-size: 1.1em;
   margin: 0 0 10px 10px;
-  border-bottom: solid 1px white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  // color:white;
-
+  border: none;
   &:hover {
     background-color: white;
     color: grey;
@@ -120,10 +120,14 @@ button {
   border-top: solid 1px grey;
   border-left: solid 1px grey;
   padding: 5px;
-  order: 2;
+  order: 3;
+  margin: 10px;
+  min-width: 200px;
+  min-height: 150px;
+
 
   @media(min-width: 700px) {
-    order: 3;
+    order: 2;
   }
   a {
     color: inherit;
@@ -139,9 +143,10 @@ button {
 }
 
 .sections {
-  min-width: 200px;
-  min-height: 100px;
-  margin: 10px;
+
+  // flex-grow: 1;
+  // flex-basis: 1;
+  // flex: 1;
   p, h1 {
     margin: 0;
     padding: 0;
@@ -153,6 +158,16 @@ button {
   border-top: solid 1px grey;
   border-right: solid 1px grey;
   padding: 5px;
+  min-width: 200px;
+  min-height: 150px;
+  margin: 10px;
+  // @media (min-width: 700px) {
+  //   width: 100%;
+  // }
+}
+
+.center {
+  max-width: 600px;
 }
 
 </style>

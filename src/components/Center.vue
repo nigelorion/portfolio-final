@@ -3,7 +3,6 @@
     <div class="projects">
       <div class="projectWrapper hbailey">
         <p>hbailey</p>
-        <p>clothing boutique static site built with vuejs</p>
         <a href="#">code</a>
         <a href="#">live</a>
 
@@ -44,14 +43,11 @@ export default {
 
  .projects {
    display: flex;
-   // width: 400px;
-   // height: 400px;
+
    flex-wrap: wrap;
-   max-width: 500px;
-   max-height: 500px;
    @media(max-width:700px) {
      width: 100%;
-     height: 100%;
+     height: 100vh;
    }
    justify-content: center;
    // transform: rotate(45deg);
@@ -62,8 +58,8 @@ export default {
     .projectWrapper {
      // min-width: 200px;
      // min-height: 200px;
-     height: 200px;
-     width: 200px;
+     height: 250px;
+     width: 250px;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -72,8 +68,8 @@ export default {
      border: solid 1px white;
      margin: 1%;
      @media(max-width:700px) {
-       width: 250px;
-       height: 250px;
+       width: 100%;
+       height: 200px;
        margin: 5px;
      }
      a {
