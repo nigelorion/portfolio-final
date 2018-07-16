@@ -71,6 +71,8 @@ export default {
        width: 100%;
        height: 200px;
        margin: 5px;
+       flex-direction: row;
+       justify-content: space-around;
      }
      a {
        opacity: 0;
@@ -80,6 +82,9 @@ export default {
        &:hover {
          color: grey;
          background-color: white;
+       }
+       @media(max-width: 700px) {
+         opacity: 1;
        }
      }
      &:hover {

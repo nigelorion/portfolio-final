@@ -43,7 +43,6 @@ export default {
     aboutToggle: function () {
       this.aboutState = true
       this.portfolioState = false
-
     },
     portfolioToggle: function () {
       this.aboutState = false
@@ -67,7 +66,6 @@ body {
   background-color: rgb(33, 33, 33);
 }
 
-
 * {
   box-sizing: border-box;
   transition: all 400ms;
@@ -84,10 +82,12 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 5%;
-  @media(max-width: 700px) {
+  @media(max-width: 1100px) {
     flex-direction: column;
     height: auto;
     justify-content: flex-start;
+    padding: 0;
+    width: 100vw;
   }
 }
 
@@ -126,7 +126,8 @@ button {
   min-height: 150px;
 
 
-  @media(min-width: 700px) {
+  @media(max-width: 700px) {
+    width: 100%;
     order: 2;
   }
   a {
@@ -143,6 +144,9 @@ button {
 }
 
 .sections {
+  // @media(min-width: 700px) {
+  //   width: 100%;
+  // }
 
   // flex-grow: 1;
   // flex-basis: 1;
@@ -161,13 +165,20 @@ button {
   min-width: 200px;
   min-height: 150px;
   margin: 10px;
-  // @media (min-width: 700px) {
-  //   width: 100%;
-  // }
+
+  @media (max-width: 700px) {
+    width: 100%;
+    font-size: .8em;
+    min-width: none;
+  }
 }
 
 .center {
   max-width: 600px;
+  @media(max-width: 700px) {
+    width: 100%;
+    order: 3;
+  }
 }
 
 </style>
