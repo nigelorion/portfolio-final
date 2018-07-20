@@ -1,5 +1,4 @@
 <template>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <div id="app">
     <div class="title sections">
       <button v-on:click="aboutToggle()" type="button" name="button">about</button>
@@ -15,9 +14,9 @@
       </transition>
     </div>
     <div class="contact sections">
-      <a href="#">github</a>
-      <a href="#">linkedin</a>
-      <a href="#">email</a>
+      <a target="_blank" href="https://github.com/nigelorion">github</a>
+      <a target="_blank" href="https://www.linkedin.com/in/nigelorion/">linkedin</a>
+      <a href="mailto:nigelorion@gmail.com">email</a>
     </div>
   </div>
 </template>
