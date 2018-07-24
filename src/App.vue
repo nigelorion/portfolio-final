@@ -123,6 +123,13 @@ button {
   margin: 10px;
   min-width: 200px;
   min-height: 150px;
+  &:hover {
+    padding: 15px;
+
+  }
+  &:hover > a {
+    margin: 3px;
+  }
 
 
   @media(max-width: 700px) {
