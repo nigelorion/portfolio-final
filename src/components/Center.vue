@@ -2,28 +2,44 @@ atom .<template>
   <div class="main">
     <div class="projects">
       <div class="projectWrapper hbailey">
-        <p>hbailey</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
-
+        <div class="show">
+          <p>hbailey</p>
+          <p>vuejs</p>
+        </div>
+        <div class="hidden">
+          <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
+          <a target="_blank" href="http://hbailey.boutique">live</a>
+        </div>
       </div>
       <div class="projectWrapper">
-        <p>hunt</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
-
+        <div class="show">
+          <p>spotifyapi</p>
+          <p>reactjs</p>
+        </div>
+        <div class="hidden">
+          <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
+          <a target="_blank" href="http://hbailey.boutique">live</a>
+        </div>
       </div>
       <div class="projectWrapper">
-        <p>starwarsapi</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
-
+        <div class="show">
+          <p>starwarsapi</p>
+          <p>vuejs</p>
+        </div>
+        <div class="hidden">
+          <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
+          <a target="_blank" href="http://hbailey.boutique">live</a>
+        </div>
       </div>
       <div class="projectWrapper">
-        <p>flipperapp</p>
-        <a href="#">code</a>
-        <a href="#">live</a>
-
+        <div class="show">
+          <p>movie-list</p>
+          <p>reactjs</p>
+        </div>
+        <div class="hidden">
+          <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
+          <a target="_blank" href="http://hbailey.boutique">live</a>
+        </div>
       </div>
     </div>
   </div>
@@ -43,14 +59,11 @@ export default {
 
  .projects {
    display: flex;
-   // width: 400px;
-   // height: 400px;
+
    flex-wrap: wrap;
-   max-width: 500px;
-   max-height: 500px;
    @media(max-width:700px) {
      width: 100%;
-     height: 100%;
+     height: 100vh;
    }
    justify-content: center;
    // transform: rotate(45deg);
@@ -61,28 +74,42 @@ export default {
     .projectWrapper {
      // min-width: 200px;
      // min-height: 200px;
-     height: 200px;
-     width: 200px;
+     height: 250px;
+     width: 250px;
      display: flex;
-     justify-content: center;
+     justify-content: space-around;
      align-items: center;
-     flex-direction: column;
+    //  flex-direction: column;
      // background-color: rgb(105, 117, 133);
      border: solid 1px white;
      margin: 1%;
+     color: lightblue;
      @media(max-width:700px) {
-       width: 250px;
-       height: 250px;
+       width: 100%;
+       height: 200px;
        margin: 5px;
+       flex-direction: row;
+       justify-content: space-around;
      }
-     a {
+     .hidden {
        opacity: 0;
        transition: 500ms;
+       border-left: solid 1px white;
+       border-top: solid 1px white;
+       padding: 3px;
+       &:hover {
+         padding: 10px;
+       }
+     }
+     a {
        color: white;
        text-decoration: none;
        &:hover {
          color: grey;
          background-color: white;
+       }
+       @media(max-width: 700px) {
+         opacity: 1;
        }
      }
      &:hover {
@@ -111,12 +138,18 @@ export default {
            100%{background-position:0% 38%}
        }
       }
-     &:hover > a {
+     &:hover > .hidden {
        opacity: 1;
      }
    }
  }
 //
+
+.hidden, .show {
+  display: flex;
+  flex-direction: column;
+
+}
 // .hbailey {
 //   background-image: url(../assets/hbaileyimage.png);
 //   background-position: center;

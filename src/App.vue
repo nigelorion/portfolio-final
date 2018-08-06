@@ -1,5 +1,4 @@
 <template>
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <div id="app">
     <div class="title sections">
       <button v-on:click="aboutToggle()" type="button" name="button">about</button>
@@ -8,16 +7,16 @@
       <p>web developer</p>
       <p>pdx</p>
     </div>
-    <div class="aboutAndPortfolio sections">
+    <div class="center sections">
       <transition name="slide-fade" mode="out-in">
         <Center v-if="portfolioState"/>
         <About v-if="aboutState"/>
       </transition>
     </div>
     <div class="contact sections">
-      <a href="#">github</a>
-      <a href="#">linkedin</a>
-      <a href="#">email</a>
+      <a target="_blank" href="https://github.com/nigelorion">github</a>
+      <a target="_blank" href="https://www.linkedin.com/in/nigelorion/">linkedin</a>
+      <a href="mailto:nigelorion@gmail.com">email</a>
     </div>
   </div>
 </template>
@@ -43,7 +42,6 @@ export default {
     aboutToggle: function () {
       this.aboutState = true
       this.portfolioState = false
-
     },
     portfolioToggle: function () {
       this.aboutState = false
@@ -80,11 +78,15 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  @media(max-width: 700px) {
+  padding: 5%;
+  @media(max-width: 1100px) {
     flex-direction: column;
+    height: auto;
     justify-content: flex-start;
+    padding: 0;
+    width: 100vw;
   }
 }
 
@@ -94,12 +96,7 @@ button {
   color: inherit;
   font-size: 1.1em;
   margin: 0 0 10px 10px;
-  border-bottom: solid 1px white;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  // color:white;
-
+  border: none;
   &:hover {
     background-color: white;
     color: grey;
@@ -122,10 +119,22 @@ button {
   border-top: solid 1px grey;
   border-left: solid 1px grey;
   padding: 5px;
-  order: 2;
+  order: 3;
+  margin: 10px;
+  min-width: 200px;
+  min-height: 150px;
+  &:hover {
+    padding: 15px;
 
-  @media(min-width: 700px) {
-    order: 3;
+  }
+  &:hover > a {
+    margin: 3px;
+  }
+
+
+  @media(max-width: 700px) {
+    width: 100%;
+    order: 2;
   }
   a {
     color: inherit;
@@ -141,9 +150,13 @@ button {
 }
 
 .sections {
-  min-width: 200px;
-  min-height: 100px;
-  margin: 10px;
+  // @media(min-width: 700px) {
+  //   width: 100%;
+  // }
+
+  // flex-grow: 1;
+  // flex-basis: 1;
+  // flex: 1;
   p, h1 {
     margin: 0;
     padding: 0;
@@ -155,6 +168,23 @@ button {
   border-top: solid 1px grey;
   border-right: solid 1px grey;
   padding: 5px;
+  min-width: 200px;
+  min-height: 150px;
+  margin: 10px;
+
+  @media (max-width: 700px) {
+    width: 100%;
+    font-size: .8em;
+    min-width: none;
+  }
+}
+
+.center {
+  max-width: 600px;
+  @media(max-width: 700px) {
+    width: 100%;
+    order: 3;
+  }
 }
 
 </style>

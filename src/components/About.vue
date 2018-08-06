@@ -23,12 +23,12 @@
 
       </div>
       <div class="projectWrapper three">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p> -->
         <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/11905752_963926466764_6769395531660920993_n.jpg?_nc_cat=0&oh=6b5985a34313181f697ff68d40a3d15b&oe=5BB7FCBB" alt="">
 
       </div>
       <div class="projectWrapper four">
-        <p>boris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p>
+        <!-- <p>boris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat</p> -->
         <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/20431648_714174912126497_4421888905523721486_n.jpg?_nc_cat=0&oh=afe48f53fae9cc0332eb2231bfa2333a&oe=5BEC9B1A" alt="">
 
       </div>
@@ -52,8 +52,8 @@ export default {
    // width: 400px;
    // height: 400px;
    flex-wrap: wrap;
-   max-width: 500px;
-   max-height: 500px;
+  //  max-width: 500px;
+  //  max-height: 500px;
    // transform: rotate(45deg);
    // @media(max-width: 700px) {
    //   transform: rotate(0deg);
@@ -64,8 +64,8 @@ export default {
      // min-width: 200px;
      // min-height: 200px;
      position: relative;
-     height: 200px;
-     width: 200px;
+     height: 250px;
+     width: 250px;
      display: flex;
      justify-content: center;
      align-items: center;
@@ -74,6 +74,9 @@ export default {
      // border: solid 1px white;
      margin: 1%;
      @media(max-width: 700px) {
+       height: 300px;
+       width: 100%;
+       margin: 0;
      }
      a {
        opacity: 0;
@@ -98,6 +101,9 @@ export default {
       }
      &:hover > a {
        opacity: 1;
+     }
+     p {
+       font-size: 1em;
      }
    }
  }
