@@ -1,9 +1,8 @@
-<template>
+atom .<template>
   <div class="main">
     <div class="projects">
       <div class="projectWrapper hbailey">
         <p>hbailey</p>
-        <p>clothing boutique static site built with vuejs</p>
         <a href="#">code</a>
         <a href="#">live</a>
 
