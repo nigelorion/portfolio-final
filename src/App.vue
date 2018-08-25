@@ -9,7 +9,7 @@
     </div>
     <div class="center sections">
       <transition name="slide-fade" mode="out-in">
-        <Center v-if="portfolioState"/>
+        <Portfolio v-if="portfolioState"/>
         <About v-if="aboutState"/>
       </transition>
     </div>
@@ -23,13 +23,13 @@
 
 <script>
 
-import Center from './components/Center.vue'
+import Portfolio from './components/Portfolio.vue'
 import About from './components/About.vue'
 
 export default {
   name: 'app',
   components: {
-    Center,
+    Portfolio,
     About
   },
   data () {
@@ -46,7 +46,6 @@ export default {
     portfolioToggle: function () {
       this.aboutState = false
       this.portfolioState = true
-
     }
   }
 }
@@ -62,12 +61,11 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background-color: rgb(33, 33, 33);
+  background-color: rgb(0, 0, 0);
 }
 
 * {
   box-sizing: border-box;
-  transition: all 400ms;
 }
 
 #app {
@@ -81,12 +79,17 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 5%;
-  @media(max-width: 1100px) {
+  @media(max-width: 952px) {
     flex-direction: column;
     height: auto;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     width: 100vw;
+    font-size: 1.2em;
+  }
+  @media(max-width: 700px) {
+    justify-content: flex-start;
   }
 }
 
@@ -94,25 +97,16 @@ body {
 button {
   background-color: rgba(37, 60, 187, 0);
   color: inherit;
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin: 0 0 10px 10px;
-  border: none;
+  border: solid white 1px;
   &:hover {
     background-color: white;
     color: grey;
   }
-}
-
-.slide-fade-enter-active {
-  transition: all 1.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all;
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  // transform: translate  // transform: translateX(40px);X(40px);
-  opacity: 0;
+  &:focus {
+    outline: none;
+  }
 }
 
 .contact {
@@ -123,25 +117,23 @@ button {
   margin: 10px;
   min-width: 200px;
   min-height: 150px;
-  &:hover {
-    padding: 15px;
-
-  }
-  &:hover > a {
-    margin: 3px;
-  }
-
-
   @media(max-width: 700px) {
     width: 100%;
     order: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   a {
     color: inherit;
-    width: 80px;
     text-decoration: none;
     transition: all 350ms;
     display: block;
+    padding: 3px;
+    @media(max-width: 700px) {
+      border: solid white 1px;
+      margin: 3px;
+    }
     &:hover {
       color: grey;
       background-color: white;
@@ -150,13 +142,6 @@ button {
 }
 
 .sections {
-  // @media(min-width: 700px) {
-  //   width: 100%;
-  // }
-
-  // flex-grow: 1;
-  // flex-basis: 1;
-  // flex: 1;
   p, h1 {
     margin: 0;
     padding: 0;
@@ -185,6 +170,18 @@ button {
     width: 100%;
     order: 3;
   }
+}
+
+//// section transistions
+
+.slide-fade-enter-active {
+  transition: all 1.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  opacity: 0;
 }
 
 </style>
