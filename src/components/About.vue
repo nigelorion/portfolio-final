@@ -140,11 +140,13 @@ img {
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
 .bioBtn {
   font-size: 2em;
   padding: 5px;
+  margin: 0;
 }
 
 .aboutOverlay {
