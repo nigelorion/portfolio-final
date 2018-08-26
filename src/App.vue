@@ -80,16 +80,15 @@ body {
   align-items: center;
   padding: 5%;
   @media(max-width: 952px) {
-    flex-direction: column;
     height: auto;
     justify-content: center;
     align-items: center;
     padding: 0;
-    width: 100vw;
     font-size: 1.2em;
   }
-  @media(max-width: 700px) {
+  @media(max-width: 952px) {
     justify-content: flex-start;
+    flex-direction: column;
   }
 }
 
@@ -121,7 +120,7 @@ button {
   margin: 10px;
   min-width: 200px;
   min-height: 150px;
-  @media(max-width: 700px) {
+  @media(max-width: 952px) {
     width: 100%;
     order: 2;
     display: flex;
@@ -135,7 +134,7 @@ button {
     transition: all 400ms;
     display: block;
     padding: 3px;
-    @media(max-width: 700px) {
+    @media(max-width: 952px) {
       border: solid white 1px;
       margin: 3px;
     }
@@ -162,7 +161,7 @@ button {
   min-height: 150px;
   margin: 10px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 952px) {
     width: 100%;
     font-size: .8em;
     min-width: none;
@@ -173,7 +172,7 @@ button {
 
 .center {
   max-width: 600px;
-  @media(max-width: 700px) {
+  @media(max-width: 952px) {
     width: 100%;
     order: 3;
   }
