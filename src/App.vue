@@ -100,12 +100,16 @@ button {
   font-size: 1.3em;
   margin: 0 0 10px 10px;
   border: solid white 1px;
+  transition: all 400ms;
   &:hover {
     background-color: white;
-    color: grey;
+    color: black;
   }
   &:focus {
     outline: none;
+  }
+  @media(max-width: 700px) {
+    font-size: 1.7em;
   }
 }
 
@@ -123,11 +127,12 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-left: none;
   }
   a {
     color: inherit;
     text-decoration: none;
-    transition: all 350ms;
+    transition: all 400ms;
     display: block;
     padding: 3px;
     @media(max-width: 700px) {
@@ -135,7 +140,7 @@ button {
       margin: 3px;
     }
     &:hover {
-      color: grey;
+      color: black;
       background-color: white;
     }
   }
@@ -161,6 +166,8 @@ button {
     width: 100%;
     font-size: .8em;
     min-width: none;
+    padding: 25px 25px 0 0;
+    border: none;
   }
 }
 
@@ -172,7 +179,7 @@ button {
   }
 }
 
-//// section transistions
+//// section transitions
 
 .slide-fade-enter-active {
   transition: all 1.3s ease;

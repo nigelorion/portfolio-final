@@ -104,6 +104,7 @@ export default {
     a {
       color: white;
       text-decoration: none;
+      transition: all 400ms;
       &:hover {
         color: grey;
         background-color: white;

@@ -28,7 +28,7 @@
       <div class="projectWrapper four">
         <ul class="list">
           <li>builder</li>
-          <li>inovator</li>
+          <li>innovator</li>
           <li>creator</li>
           <li>teacher</li>
         </ul>
@@ -147,6 +147,9 @@ img {
   font-size: 2em;
   padding: 5px;
   margin: 0;
+  &:hover {
+    cursor: pointer;
+  } 
 }
 
 .aboutOverlay {
