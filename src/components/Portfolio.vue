@@ -67,7 +67,6 @@ export default {
   max-width: 500px;
   @media(max-width:700px) {
     width: 100%;
-    height: 100vh;
   }
   justify-content: center;
   .projectWrapper {
@@ -84,7 +83,7 @@ export default {
     padding: 10px;
     @media(max-width:700px) {
       width: 100%;
-      height: 200px;
+      height: 100px;
       flex-direction: row;
     }
     .hidden {

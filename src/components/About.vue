@@ -2,7 +2,7 @@
   <div class="main">
     <div class="projects">
       <div v-if="overlayState" class="aboutOverlay">
-        <p v-on:click="overlayState = !overlayState">this is the about me section: Lorem ipsum dolor sit amet consectetur adipisicing elit. Id beatae ullam velit unde libero laborum voluptates nisi consectetur iste similique sunt, maiores tenetur laboriosam necessitatibus delectus, reiciendis, ipsa eos. Repellendus.</p>
+        <p v-on:click="overlayState = !overlayState">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illo saepe, odio quibusdam labore ab, sint unde repudiandae porro minima enim iusto nisi cupiditate modi rem! Repellat odit laudantium facilis!</p>
       </div>
       <div class="projectWrapper one">
         <button class="bioBtn" v-on:click="overlayState = !overlayState">bio</button>
@@ -114,13 +114,13 @@ img {
   height: 100%;
   filter: grayscale(100%);
   object-fit: cover;
-  opacity: .9;
+  opacity: .8;
   &:hover {
-    opacity: 0;
+    opacity: .2;
   }
 }
 
-.one {
+.one, .three {
   background: linear-gradient(313deg, #a6bd5a, #24b1b6);
   background-size: 400% 400%;
   border: none;
@@ -129,7 +129,7 @@ img {
   animation: AnimationName 4s ease infinite;
 }
 
-.four {
+.four, .two {
     background: linear-gradient(113deg, #e3ebca, #508caf);
   background-size: 400% 400%;
   border: none;
