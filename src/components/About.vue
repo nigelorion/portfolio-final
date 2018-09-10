@@ -2,18 +2,10 @@
   <div class="main">
     <div class="projects">
       <div v-if="overlayState" class="aboutOverlay">
-        <p v-on:click="overlayState = !overlayState">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illo saepe, odio quibusdam labore ab, sint unde repudiandae porro minima enim iusto nisi cupiditate modi rem! Repellat odit laudantium facilis!</p>
+        <p v-on:click="overlayState = !overlayState">Nigel Orion is a freelancer living and working in the PNW. He is primarily a coder and web developer with a side hustle in buying and selling. Nigel’s work is well tailored and bespoke, always high quality, with an edge of irony and fun.</p>
       </div>
       <div class="projectWrapper one">
         <button class="bioBtn" v-on:click="overlayState = !overlayState">bio</button>
-        <!-- <div class="arrowWrapper">
-          <p class="arrows right">></p>
-          <p class="arrows diagonal">></p>
-          <p class="arrows down">></p>
-        </div> -->
-
-        <!-- <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/20526181_714174562126532_5893054409823984934_n.jpg?_nc_cat=0&oh=1f33f0d15d359de676fbd1e42201017f&oe=5BE73882" alt=""> -->
-
       </div>
       <div class="projectWrapper two">
      

@@ -6,10 +6,14 @@ atom .<template>
           <p>hbailey</p>
           <p>vuejs</p>
         </div>
+        <div>
+          <p class="aboutProject">A custom built project for a Seattle based mens resale clothing boutique. </p>
+        </div>
         <div class="hidden">
           <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
           <a target="_blank" href="http://hbailey.boutique">live</a>
         </div>
+    
       </div>
       <div class="projectWrapper">
         <div class="show">
@@ -76,14 +80,16 @@ export default {
     width: 200px;
     display: flex;
     align-items: center;
+    flex-direction: column;
     border: solid 1px white;
     color: lightblue;
     margin: 1%;
     justify-content: space-between;
     padding: 10px;
+    text-align: center;
     @media(max-width:700px) {
       width: 100%;
-      height: 100px;
+      height: 200px;
       flex-direction: row;
     }
     .hidden {
@@ -93,7 +99,7 @@ export default {
       border-top: solid 1px white;
       padding: 3px;
       &:hover {
-        padding: 10px;
+        // padding: 10px;
       }
       @media(max-width: 700px) {
         opacity: 1;
@@ -141,6 +147,9 @@ export default {
     &:hover > .hidden {
       opacity: 1;
     }
+    &:hover > .aboutProject {
+      opacity: 0;
+    }
   }
 }
 
@@ -150,4 +159,22 @@ export default {
 
 }
 
+
+img {
+  height: 100%;
+}
+
+.aboutProject {
+  font-size: .8em;
+  margin: 5px;
+}
+
+.show {
+  border-bottom: solid white 1px;
+  padding: 5px;
+  @media(max-width: 700px) {
+    border-bottom: none;
+    border-right: solid white 1px;
+  }
+}
 </style>
