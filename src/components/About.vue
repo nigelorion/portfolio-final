@@ -8,7 +8,7 @@
         <button class="bioBtn" v-on:click="overlayState = !overlayState">bio</button>
       </div>
       <div class="projectWrapper two">
-     
+
         <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/31408230_844735999070387_1217057061532073984_n.jpg?_nc_cat=0&oh=5684caf35c9f5b94ec138773908dbb58&oe=5BB6414C" alt="">
 
       </div>
@@ -37,7 +37,7 @@ export default {
   data () {
     return {
       overlayState: false
-  
+
     }
   }
 }
@@ -50,7 +50,6 @@ export default {
   justify-content: center;
   align-items: center;
 }
-
  .projects {
    display: flex;
    justify-content: center;
@@ -89,7 +88,6 @@ export default {
        -webkit-animation: AnimationName 4s ease infinite;
        -moz-animation: AnimationName 4s ease infinite;
        animation: AnimationName 4s ease infinite;
-
       }
      &:hover > a {
        opacity: 1;
@@ -99,7 +97,6 @@ export default {
      }
    }
  }
-
 img {
   position: absolute;
   width: 100%;
@@ -111,7 +108,6 @@ img {
     opacity: .2;
   }
 }
-
 .one, .three {
   background: linear-gradient(313deg, #a6bd5a, #24b1b6);
   background-size: 400% 400%;
@@ -120,7 +116,6 @@ img {
   -moz-animation: AnimationName 4s ease infinite;
   animation: AnimationName 4s ease infinite;
 }
-
 .four, .two {
     background: linear-gradient(113deg, #e3ebca, #508caf);
   background-size: 400% 400%;
@@ -129,21 +124,18 @@ img {
   -moz-animation: AnimationName 4s ease infinite;
   animation: AnimationName 4s ease infinite;
 }
-
 .list {
   list-style: none;
   padding: 0;
 }
-
 .bioBtn {
   font-size: 2em;
   padding: 5px;
   margin: 0;
   &:hover {
     cursor: pointer;
-  } 
+  }
 }
-
 .aboutOverlay {
   position: absolute;
   height: 100%;
@@ -155,9 +147,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
-
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 38%}
     50%{background-position:100% 63%}
@@ -174,4 +164,3 @@ img {
     100%{background-position:0% 38%}
 }
 </style>
-v

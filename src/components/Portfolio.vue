@@ -55,17 +55,15 @@ export default {
 }
 </script>
 
+<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .projects {
   display: flex;
-
   flex-wrap: wrap;
   max-width: 500px;
   @media(max-width:700px) {
@@ -73,6 +71,8 @@ export default {
   }
   justify-content: center;
   .projectWrapper {
+    // min-width: 200px;
+    // min-height: 200px;
     height: 200px;
     width: 200px;
     display: flex;
@@ -96,6 +96,7 @@ export default {
       border-top: solid 1px white;
       padding: 3px;
       &:hover {
+        // padding: 10px;
       }
       @media(max-width: 700px) {
         opacity: 1;
@@ -148,21 +149,17 @@ export default {
     }
   }
 }
-
 .hidden, .show {
   display: flex;
   flex-direction: column;
 }
-
 img {
   height: 100%;
 }
-
 .aboutProject {
   font-size: .8em;
   margin: 5px;
 }
-
 .show {
   border-bottom: solid white 1px;
   padding: 5px;
