@@ -143,15 +143,10 @@ export default {
      }
    }
  }
-//
 
 .hidden, .show {
   display: flex;
   flex-direction: column;
-
 }
-// .hbailey {
-//   background-image: url(../assets/hbaileyimage.png);
-//   background-position: center;
-// }
+
 </style>
