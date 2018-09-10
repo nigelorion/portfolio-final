@@ -9,7 +9,7 @@
     </div>
     <div class="center sections">
       <transition name="slide-fade" mode="out-in">
-        <Center v-if="portfolioState"/>
+        <Portfolio v-if="portfolioState"/>
         <About v-if="aboutState"/>
       </transition>
     </div>
@@ -23,13 +23,13 @@
 
 <script>
 
-import Center from './components/Center.vue'
+import Portfolio from './components/Portfolio.vue'
 import About from './components/About.vue'
 
 export default {
   name: 'app',
   components: {
-    Center,
+    Portfolio,
     About
   },
   data () {
@@ -46,7 +46,6 @@ export default {
     portfolioToggle: function () {
       this.aboutState = false
       this.portfolioState = true
-
     }
   }
 }
@@ -62,12 +61,15 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+<<<<<<< HEAD
   background-color: rgb(203, 152, 130);
+=======
+  background-color: rgb(0, 0, 0);
+>>>>>>> d98ed3656b6952c37633e5751214863ae37d545b
 }
 
 * {
   box-sizing: border-box;
-  transition: all 400ms;
 }
 
 #app {
@@ -81,25 +83,37 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 5%;
-  @media(max-width: 1100px) {
-    flex-direction: column;
+  @media(max-width: 952px) {
     height: auto;
-    justify-content: flex-start;
+    justify-content: center;
+    align-items: center;
     padding: 0;
-    width: 100vw;
+    font-size: 1.2em;
+  }
+  @media(max-width: 952px) {
+    justify-content: flex-start;
+    flex-direction: column;
   }
 }
 
 button {
   background-color: rgba(37, 60, 187, 0);
   color: inherit;
-  font-size: 1.1em;
+  font-size: 1.3em;
   margin: 0 0 10px 10px;
-  border: none;
+  border: solid white 1px;
+  transition: all 400ms;
   &:hover {
     background-color: white;
-    color: grey;
+    color: black;
   }
+  &:focus {
+    outline: none;
+  }
+  @media(max-width: 700px) {
+    font-size: 1.7em;
+  }
+<<<<<<< HEAD
 }
 
 .slide-fade-enter-active {
@@ -110,6 +124,8 @@ button {
 }
 .slide-fade-enter, .slide-fade-leave-to
   opacity: 0;
+=======
+>>>>>>> d98ed3656b6952c37633e5751214863ae37d545b
 }
 
 .contact {
@@ -120,6 +136,7 @@ button {
   margin: 10px;
   min-width: 200px;
   min-height: 150px;
+<<<<<<< HEAD
   &:hover {
     padding: 15px;
 
@@ -128,17 +145,28 @@ button {
     margin: 3px;
   }
   @media(max-width: 700px) {
+=======
+  @media(max-width: 952px) {
+>>>>>>> d98ed3656b6952c37633e5751214863ae37d545b
     width: 100%;
     order: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-left: none;
   }
   a {
     color: inherit;
-    width: 80px;
     text-decoration: none;
-    transition: all 350ms;
+    transition: all 400ms;
     display: block;
+    padding: 3px;
+    @media(max-width: 952px) {
+      border: solid white 1px;
+      margin: 3px;
+    }
     &:hover {
-      color: grey;
+      color: black;
       background-color: white;
     }
   }
@@ -159,19 +187,38 @@ button {
   min-width: 200px;
   min-height: 150px;
   margin: 10px;
+<<<<<<< HEAD
   @media (max-width: 700px) {
+=======
+
+  @media (max-width: 952px) {
+>>>>>>> d98ed3656b6952c37633e5751214863ae37d545b
     width: 100%;
     font-size: .8em;
     min-width: none;
+    padding: 25px 25px 0 0;
+    border: none;
   }
 }
 
 .center {
   max-width: 600px;
-  @media(max-width: 700px) {
+  @media(max-width: 952px) {
     width: 100%;
     order: 3;
   }
+}
+
+//// section transitions
+
+.slide-fade-enter-active {
+  transition: all 1.3s ease;
+}
+.slide-fade-leave-active {
+  transition: all;
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  opacity: 0;
 }
 
 </style>
