@@ -9,7 +9,7 @@
     </div>
     <div class="center sections">
       <transition name="slide-fade" mode="out-in">
-        <Portfolio v-if="portfolioState"/>
+        <Portfolio v-on:portfolioLink="portfolioToggle()" v-if="portfolioState"/>
         <About v-if="aboutState"/>
       </transition>
     </div>
@@ -73,14 +73,14 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 5%;
-  @media(max-width: 952px) {
+  @media(max-width: 900px) {
     height: auto;
     justify-content: center;
     align-items: center;
     padding: 0;
     font-size: 1.2em;
   }
-  @media(max-width: 952px) {
+  @media(max-width: 900px) {
     justify-content: flex-start;
     flex-direction: column;
   }
@@ -111,13 +111,14 @@ button {
   margin: 10px;
   min-width: 200px;
   min-height: 150px;
-  @media(max-width: 952px) {
+  @media(max-width: 900px) {
     width: 100%;
     order: 2;
     display: flex;
     justify-content: space-around;
     align-items: center;
     border-left: none;
+    border-bottom: solid 1px grey;
   }
   a {
     color: inherit;
@@ -125,7 +126,7 @@ button {
     transition: all 400ms;
     display: block;
     padding: 3px;
-    @media(max-width: 952px) {
+    @media(max-width: 900px) {
       border: solid white 1px;
       margin: 3px;
     }
@@ -147,19 +148,18 @@ button {
   border-right: solid 1px grey;
   padding: 5px;
   min-width: 200px;
-  min-height: 150px;
+  height: 150px;
   margin: 10px;
-  @media (max-width: 952px) {
+  @media (max-width: 900px) {
     width: 100%;
-    font-size: .8em;
-    min-width: none;
+    font-size: .7em;
     padding: 25px 25px 0 0;
     border: none;
   }
 }
 .center {
   max-width: 600px;
-  @media(max-width: 952px) {
+  @media(max-width: 900px) {
     width: 100%;
     order: 3;
   }

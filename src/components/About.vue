@@ -1,9 +1,13 @@
 <template>
   <div class="main">
-    <div class="projects">
-      <div v-if="overlayState" class="aboutOverlay">
-        <p v-on:click="overlayState = !overlayState">Nigel Orion is a freelancer living and working in the PNW. He is primarily a coder and web developer with a side hustle in buying and selling. Nigel’s work is well tailored and bespoke, always high quality, with an edge of irony and fun.</p>
-      </div>
+    <div v-if="overlayState" class="aboutOverlay">
+
+      <p>Nigel Orion is a freelancer living and working in the PNW. He is primarily a coder and web developer with a side hustle in buying and selling. His love for digging into all things mechanical lends well to his passion for programming. Nigel’s <button v-on:click="$emit('portfolioLink')">work</button> is well tailored and bespoke, always high quality, with an edge of irony and fun.</p>
+      <p>Proficent with: HTML, CSS, SCSS, Javascript, VueJS, ReactJS, Angular2, Git, Linux</p>
+
+    </div>
+    <div v-if="!overlayState" class="projects">
+
       <div class="projectWrapper one">
         <button class="bioBtn" v-on:click="overlayState = !overlayState">bio</button>
       </div>
@@ -38,6 +42,11 @@ export default {
     return {
       overlayState: false
 
+    }
+  },
+  methods: {
+    emitter() {
+      this.$emit('portfolioLink')
     }
   }
 }
@@ -98,15 +107,12 @@ export default {
    }
  }
 img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+  height: 200px;
+  width: 200px;
+
   filter: grayscale(100%);
   object-fit: cover;
   opacity: .8;
-  &:hover {
-    opacity: .2;
-  }
 }
 .one, .three {
   background: linear-gradient(313deg, #a6bd5a, #24b1b6);
@@ -137,17 +143,26 @@ img {
   }
 }
 .aboutOverlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+  width: 500px;
   padding: 5%;
   border: solid white 1px;
-  background-color: black;
-  z-index: 99;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  flex-direction: column;
+  background-color: white;
+  color: black;
+  @media(max-width: 1000px) {
+    border: none;
+    width: 100%;
+  }
+  p {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 10px;
+    padding: 10px;
+  }
 }
+
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 38%}
     50%{background-position:100% 63%}

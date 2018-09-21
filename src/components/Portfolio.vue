@@ -3,31 +3,34 @@
     <div class="projects">
       <div class="projectWrapper hbailey">
         <div class="show">
-          <p>hbailey</p>
-          <p>vuejs</p>
+          <a class="projectName" target="_blank" href="http://hbailey.boutique">H.Bailey</a>
+          <p>VueJS</p>
         </div>
         <div>
           <p class="aboutProject">A custom built project for a Seattle based mens resale clothing boutique. </p>
         </div>
         <div class="hidden">
-          <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
-          <a target="_blank" href="http://hbailey.boutique">live</a>
+          <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
+          <a class="hiddenLinks" target="_blank" href="http://hbailey.boutique">live</a>
         </div>
 
       </div>
       <div class="projectWrapper">
         <div class="show">
-          <p>spotifyapi</p>
-          <p>reactjs</p>
+          <a class="projectName" target="_blank" href="https://current-aqi.herokuapp.com">AQI App</a>
+          <p>ReactJS</p>
+        </div>
+        <div>
+          <p class="aboutProject">A simple widget utilizing multiple APIs to display air quality and weather data</p>
         </div>
         <div class="hidden">
-          <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
-          <a target="_blank" href="http://hbailey.boutique">live</a>
+          <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/air-quality-app">code</a>
+          <a class="hiddenLinks" target="_blank" href="https://current-aqi.herokuapp.com">live</a>
         </div>
       </div>
       <div class="projectWrapper">
         <div class="show">
-          <p>starwarsapi</p>
+          <p class="projectName">starwarsapi</p>
           <p>vuejs</p>
         </div>
         <div class="hidden">
@@ -37,7 +40,7 @@
       </div>
       <div class="projectWrapper">
         <div class="show">
-          <p>movie-list</p>
+          <p class="projectName">movie-list</p>
           <p>reactjs</p>
         </div>
         <div class="hidden">
@@ -65,62 +68,53 @@ export default {
 .projects {
   display: flex;
   flex-wrap: wrap;
-  max-width: 500px;
-  @media(max-width:700px) {
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  @media(max-width:900px) {
     width: 100%;
   }
-  justify-content: center;
   .projectWrapper {
-    // min-width: 200px;
-    // min-height: 200px;
-    height: 200px;
-    width: 200px;
+    width: 100%;
+    height: 220px;
     display: flex;
     align-items: center;
     flex-direction: column;
     border: solid 1px white;
-    color: lightblue;
-    margin: 1%;
+    color: white;
+    margin: 3%;
     justify-content: space-between;
     padding: 10px;
     text-align: center;
-    @media(max-width:700px) {
-      width: 100%;
-      height: 200px;
-      flex-direction: row;
+    @media(min-width:900px) {
+      width: 240px;
+      height: 240px;
+      margin: 1%;
     }
     .hidden {
-      opacity: 0;
       transition: 500ms;
-      border-left: solid 1px white;
-      border-top: solid 1px white;
       padding: 3px;
-      &:hover {
-        // padding: 10px;
-      }
-      @media(max-width: 700px) {
-        opacity: 1;
-        border: none;
+      display: inline-block;
+      @media(min-width: 900px){
+        opacity: 0;
       }
     }
-    a {
+    .hiddenLinks {
       color: white;
       text-decoration: none;
       transition: all 400ms;
+      opacity: 1;
+      border: solid white 1px;
+      margin: 5px;
+      padding: 3px;
       &:hover {
         color: grey;
         background-color: white;
       }
-      @media(max-width: 700px) {
-        opacity: 1;
-        border: solid white 1px;
-        margin: 3px;
-        padding: 3px;
-      }
     }
     &:hover {
       background: linear-gradient(313deg, #7fe7f6, #d27778);
-      border: none;
       background-size: 400% 400%;
       -webkit-animation: AnimationName 4s ease infinite;
       -moz-animation: AnimationName 4s ease infinite;
@@ -161,11 +155,16 @@ img {
   margin: 5px;
 }
 .show {
-  border-bottom: solid white 1px;
   padding: 5px;
-  @media(max-width: 700px) {
-    border-bottom: none;
-    border-right: solid white 1px;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.projectName {
+  color: white;
+
 }
 </style>
