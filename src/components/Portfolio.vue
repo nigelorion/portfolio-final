@@ -28,7 +28,7 @@
           <a class="hiddenLinks" target="_blank" href="https://current-aqi.herokuapp.com">live</a>
         </div>
       </div>
-      <div class="projectWrapper">
+      <!-- <div class="projectWrapper">
         <div class="show">
           <p class="projectName">starwarsapi</p>
           <p>vuejs</p>
@@ -47,7 +47,7 @@
           <a target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
           <a target="_blank" href="http://hbailey.boutique">live</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -106,7 +106,7 @@ export default {
       transition: all 400ms;
       opacity: 1;
       border: solid white 1px;
-      margin: 5px;
+      margin: 5px 10px 5px 10px;
       padding: 3px;
       &:hover {
         color: grey;

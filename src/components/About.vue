@@ -1,35 +1,22 @@
 <template>
   <div class="main">
-    <div v-if="overlayState" class="aboutOverlay">
-
-      <p>Nigel Orion is a freelancer living and working in the PNW. He is primarily a coder and web developer with a side hustle in buying and selling. His love for digging into all things mechanical lends well to his passion for programming. Nigel’s <button v-on:click="$emit('portfolioLink')">work</button> is well tailored and bespoke, always high quality, with an edge of irony and fun.</p>
-      <p>Proficent with: HTML, CSS, SCSS, Javascript, VueJS, ReactJS, Angular2, Git, Linux</p>
-
-    </div>
-    <div v-if="!overlayState" class="projects">
-
-      <div class="projectWrapper one">
-        <button class="bioBtn" v-on:click="overlayState = !overlayState">bio</button>
+    <div class="aboutBox">
+      <div class="colorBoxes">
+        <div class="colorLeft">
+          <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/39441805_938462563031063_1209652005337825280_n.jpg?_nc_cat=0&oh=0692cb21412ffbce180462b75750ea5e&oe=5C018CED" alt="Photo of Nigel and is dog, Hudson">
+        </div>
+        <div class="colorRight">
+          <ul class="list">
+            <li>builder</li>
+            <li>innovator</li>
+            <li>creator</li>
+            <li>teacher</li>
+          </ul>
+        </div>
       </div>
-      <div class="projectWrapper two">
-
-        <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/31408230_844735999070387_1217057061532073984_n.jpg?_nc_cat=0&oh=5684caf35c9f5b94ec138773908dbb58&oe=5BB6414C" alt="">
-
-      </div>
-      <div class="projectWrapper three">
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.</p> -->
-        <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/39441805_938462563031063_1209652005337825280_n.jpg?_nc_cat=0&oh=0692cb21412ffbce180462b75750ea5e&oe=5C018CED" alt="">
-
-      </div>
-      <div class="projectWrapper four">
-        <ul class="list">
-          <li>builder</li>
-          <li>innovator</li>
-          <li>creator</li>
-          <li>teacher</li>
-        </ul>
-        <!-- <img src="https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/20431648_714174912126497_4421888905523721486_n.jpg?_nc_cat=0&oh=afe48f53fae9cc0332eb2231bfa2333a&oe=5BEC9B1A" alt=""> -->
-
+      <div class="aboutText">
+        <p>Nigel Orion is a freelancer living and working in the PNW. He is primarily a coder and web developer with a side hustle in buying and selling. His love for digging into all things mechanical lends well to his passion for programming. Nigel’s work is well tailored and bespoke, always high quality, with an edge of irony and fun.</p>
+        <p>Proficent with: HTML, CSS, SCSS, Javascript, VueJS, ReactJS, Angular2, Git, Linux</p>
       </div>
     </div>
   </div>
@@ -58,6 +45,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
  .projects {
    display: flex;
@@ -107,14 +95,13 @@ export default {
    }
  }
 img {
-  height: 200px;
-  width: 200px;
-
   filter: grayscale(100%);
   object-fit: cover;
   opacity: .8;
+  width: 100%;
+  height: 100%;
 }
-.one, .three {
+.colorLeft {
   background: linear-gradient(313deg, #a6bd5a, #24b1b6);
   background-size: 400% 400%;
   border: none;
@@ -122,8 +109,11 @@ img {
   -moz-animation: AnimationName 4s ease infinite;
   animation: AnimationName 4s ease infinite;
 }
-.four, .two {
-    background: linear-gradient(113deg, #e3ebca, #508caf);
+.colorRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(113deg, #e3ebca, #508caf);
   background-size: 400% 400%;
   border: none;
   -webkit-animation: AnimationName 4s ease infinite;
@@ -133,18 +123,12 @@ img {
 .list {
   list-style: none;
   padding: 0;
+  font-size: 1.7em;
 }
-.bioBtn {
-  font-size: 2em;
-  padding: 5px;
-  margin: 0;
-  &:hover {
-    cursor: pointer;
-  }
-}
+
 .aboutOverlay {
   width: 500px;
-  padding: 5%;
+  padding: 10px;
   border: solid white 1px;
   display: flex;
   justify-content: flex-end;
@@ -161,6 +145,35 @@ img {
     margin: 10px;
     padding: 10px;
   }
+}
+
+.colorBoxes {
+  display: flex;
+  width: 100%;
+}
+
+.aboutBox {
+  width: 500px;
+  border: solid 1px white;
+  @media(max-width: 900px) {
+    border: none;
+    width: 100%;
+  }
+}
+
+.aboutText {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  p {
+    margin: 10px;
+    padding: 10px;
+  }
+}
+
+.colorLeft, .colorRight {
+  flex: 1;
 }
 
 @-webkit-keyframes AnimationName {
