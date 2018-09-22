@@ -41,59 +41,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
- .projects {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-wrap: wrap;
-   max-width: 500px;
-   position: relative;
-    .projectWrapper {
-     position: relative;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     flex-direction: column;
-     min-width: 200px;
-     min-height: 200px;
-     margin: 1%;
-     transition: all 400ms;
-     @media(max-width:450px) {
-       min-width: 150px;
-       min-height: 150px;
-     }
-     a {
-       opacity: 0;
-       transition: 500ms;
-       color: white;
-       text-decoration: none;
-       &:hover {
-         color: grey;
-         margin-right: 10px;
-       }
-     }
-     &:hover {
-       background: linear-gradient(313deg, #a6bd5a, #6d24b6);
-       background-size: 400% 400%;
-       border: none;
-       -webkit-animation: AnimationName 4s ease infinite;
-       -moz-animation: AnimationName 4s ease infinite;
-       animation: AnimationName 4s ease infinite;
-      }
-     &:hover > a {
-       opacity: 1;
-     }
-     p {
-       font-size: 1.2em;
-     }
-   }
- }
+
 img {
   filter: grayscale(100%);
   object-fit: cover;
@@ -124,27 +79,6 @@ img {
   list-style: none;
   padding: 0;
   font-size: 1.7em;
-}
-
-.aboutOverlay {
-  width: 500px;
-  padding: 10px;
-  border: solid white 1px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: column;
-  background-color: white;
-  color: black;
-  @media(max-width: 1000px) {
-    border: none;
-    width: 100%;
-  }
-  p {
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 10px;
-    padding: 10px;
-  }
 }
 
 .colorBoxes {
