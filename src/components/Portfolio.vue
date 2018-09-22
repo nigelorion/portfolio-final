@@ -13,7 +13,6 @@
           <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
           <a class="hiddenLinks" target="_blank" href="http://hbailey.boutique">live</a>
         </div>
-
       </div>
       <div class="projectWrapper">
         <div class="show">
@@ -28,7 +27,12 @@
           <a class="hiddenLinks" target="_blank" href="https://current-aqi.herokuapp.com">live</a>
         </div>
       </div>
+
       <!-- <div class="projectWrapper">
+
+        !!coming soon projects!!
+
+
         <div class="show">
           <p class="projectName">starwarsapi</p>
           <p>vuejs</p>
@@ -48,6 +52,8 @@
           <a target="_blank" href="http://hbailey.boutique">live</a>
         </div>
       </div> -->
+
+
     </div>
   </div>
 </template>
@@ -58,13 +64,14 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -143,28 +150,32 @@ export default {
     }
   }
 }
+
 .hidden, .show {
   display: flex;
   flex-direction: column;
 }
+
 img {
   height: 100%;
 }
+
 .aboutProject {
   font-size: .8em;
   margin: 5px;
 }
+
 .show {
   padding: 5px;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
 .projectName {
   color: white;
-
 }
+
 </style>
+

@@ -27,19 +27,13 @@ export default {
   name: 'About',
   data () {
     return {
-      overlayState: false
-
     }
   },
   methods: {
-    emitter() {
-      this.$emit('portfolioLink')
-    }
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 
 .main {
@@ -75,6 +69,7 @@ img {
   -moz-animation: AnimationName 4s ease infinite;
   animation: AnimationName 4s ease infinite;
 }
+
 .list {
   list-style: none;
   padding: 0;
@@ -125,4 +120,5 @@ img {
     50%{background-position:100% 63%}
     100%{background-position:0% 38%}
 }
+
 </style>

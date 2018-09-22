@@ -50,7 +50,9 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 body {
   height: 100vh;
   width: 100vw;
@@ -59,9 +61,11 @@ body {
   display: flex;
   background-color: rgb(0, 0, 0);
 }
+
 * {
   box-sizing: border-box;
 }
+
 #app {
   font-family:'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -136,12 +140,14 @@ button {
     }
   }
 }
+
 .sections {
   p, h1 {
     margin: 0;
     padding: 0;
   }
 }
+
 .title {
   text-align: right;
   border-top: solid 1px grey;
@@ -164,6 +170,7 @@ button {
     order: 3;
   }
 }
+
 //// section transitions
 .slide-fade-enter-active {
   transition: all 1.3s ease;
@@ -174,4 +181,5 @@ button {
 .slide-fade-enter, .slide-fade-leave-to {
   opacity: 0;
 }
+
 </style>
