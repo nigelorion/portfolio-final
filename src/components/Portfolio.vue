@@ -29,11 +29,11 @@
       </div>
       <div class="projectWrapper">
         <div class="show">
-          <a class="projectName" target="_blank" href="https://current-aqi.herokuapp.com">Star Wars API</a>
+          <a class="projectName" target="_blank" href="https://nigelorion.github.io/star-wars-vue">Star Wars API</a>
           <p>VueJS</p>
         </div>
         <div>
-          <p class="aboutProject">App that pulls data from the Star Wars API. Randomly or search for characters and display specific data points. Utilizes Vuex for state data management</p>
+          <p class="aboutProject">App that pulls data from the Star Wars API. Randomly or search for characters and display specific data points. Utilizes Vuex for state data management.</p>
         </div>
         <div class="hidden">
           <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/star-wars-vue">code</a>
@@ -109,6 +109,7 @@ export default {
     width: 100%;
   }
   .projectWrapper {
+    background: black;
     width: 100%;
     height: 220px;
     display: flex;
@@ -120,6 +121,8 @@ export default {
     justify-content: space-between;
     padding: 10px;
     text-align: center;
+    transition: all 300ms ease-in-out;
+  
     @media(min-width:900px) {
       width: 240px;
       height: 240px;
@@ -171,9 +174,6 @@ export default {
     &:hover > .hidden {
       opacity: 1;
     }
-    &:hover > .aboutProject {
-      opacity: 0;
-    }
   }
 }
 
@@ -203,6 +203,8 @@ img {
   color: white;
 }
 
+
+/// temporary fix for only 3 projects!/////
 .wideWrapper {
   width: 100% !important;
 }
