@@ -1,13 +1,13 @@
 <template>
   <div class="main">
     <div class="projects">
-      <div class="projectWrapper hbailey">
+      <div class="projectWrapper wideWrapper">
         <div class="show">
           <a class="projectName" target="_blank" href="http://hbailey.boutique">H.Bailey</a>
           <p>VueJS</p>
         </div>
         <div>
-          <p class="aboutProject">A custom built project for a Seattle based mens resale clothing boutique. </p>
+          <p class="aboutProject">A custom built project for a Seattle based mens resale clothing boutique. Utilizes VueJS transitions and animations. Custom built image sliders.</p>
         </div>
         <div class="hidden">
           <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
@@ -20,13 +20,39 @@
           <p>ReactJS</p>
         </div>
         <div>
-          <p class="aboutProject">A simple widget utilizing multiple APIs to display air quality and weather data</p>
+          <p class="aboutProject">A simple widget utilizing multiple APIs to display air quality and weather data.</p>
         </div>
         <div class="hidden">
           <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/air-quality-app">code</a>
           <a class="hiddenLinks" target="_blank" href="https://current-aqi.herokuapp.com">live</a>
         </div>
       </div>
+      <div class="projectWrapper">
+        <div class="show">
+          <a class="projectName" target="_blank" href="https://current-aqi.herokuapp.com">Star Wars API</a>
+          <p>VueJS</p>
+        </div>
+        <div>
+          <p class="aboutProject">App that pulls data from the Star Wars API. Randomly or search for characters and display specific data points. Utilizes Vuex for state data management</p>
+        </div>
+        <div class="hidden">
+          <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/star-wars-vue">code</a>
+          <a class="hiddenLinks" target="_blank" href="https://nigelorion.github.io/star-wars-vue">live</a>
+        </div>
+      </div>
+      <!-- <div class="projectWrapper">
+        <div class="show">
+          <a class="projectName" target="_blank" href="https://current-aqi.herokuapp.com">Star Wars API</a>
+          <p>VueJS</p>
+        </div>
+        <div>
+          <p class="aboutProject">App that pulls data from the Star Wars API. Randomly or search for characters and display specific data points. Utilizes Vuex for state data management</p>
+        </div>
+        <div class="hidden">
+          <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/star-wars-vue">code</a>
+          <a class="hiddenLinks" target="_blank" href="https://nigelorion.github.io/star-wars-vue">live</a>
+        </div>
+      </div> -->
 
       <!-- <div class="projectWrapper">
 
@@ -175,6 +201,10 @@ img {
 
 .projectName {
   color: white;
+}
+
+.wideWrapper {
+  width: 100% !important;
 }
 
 </style>
