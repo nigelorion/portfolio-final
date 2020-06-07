@@ -3,7 +3,7 @@
     <div class="aboutBox">
       <div class="colorBoxes">
         <div class="colorLeft">
-          <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/39441805_938462563031063_1209652005337825280_n.jpg?_nc_cat=0&oh=0692cb21412ffbce180462b75750ea5e&oe=5C018CED" alt="Photo of Nigel and is dog, Hudson">
+          <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/41382349_957106404500012_6675097343760531456_o.jpg?_nc_cat=104&_nc_sid=174925&_nc_ohc=0Pz1FfUf72UAX_K5eql&_nc_ht=scontent-sea1-1.xx&oh=3a3374ca2db9cc08ee224c9632f7cda9&oe=5F018D69" alt="Photo of Nigel and is dog, Hudson">
         </div>
         <div class="colorRight">
           <ul class="list">
@@ -15,8 +15,7 @@
         </div>
       </div>
       <div class="aboutText">
-        <p>Nigel Orion is a freelancer living and working in the PNW. He is primarily a coder and web developer with a side hustle in buying and selling. His love for digging into all things mechanical lends well to his passion for programming. Nigel’s work is well tailored and bespoke, always high quality, with an edge of irony and fun.</p>
-        <p>Proficent with: HTML, CSS, SCSS, Javascript, VueJS, ReactJS, Angular2, Git, Linux</p>
+        <p>A technical creative problem solver with a unique perspective to bring ideas and solutions with an empathetic approach. As a teacher and mentor, communicating effectively complex ideas as a simple solution is a passion, finding enjoyment in creating and improving processes, while educating at a high and low-level capacity. I love the ‘ah ha’ moments. If I can get someone non-technical to understand the technical, my work is done. I’m looking for a career that allows me to take my technical knowledge and apply it in a creative, consultative environment.</p>
       </div>
     </div>
   </div>
