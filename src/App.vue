@@ -16,7 +16,7 @@
     <div class="contact sections">
       <a target="_blank" href="https://github.com/nigelorion">github</a>
       <a target="_blank" href="https://www.linkedin.com/in/nigelorion/">linkedin</a>
-      <a target="_blank" href="./assets/Resume - Nigel Orion.pdf">resume</a>
+      <a target="_blank" href="assets/Resume - Nigel Orion.pdf">resume</a>
     </div>
   </div>
 </template>
