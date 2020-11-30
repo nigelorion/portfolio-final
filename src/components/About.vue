@@ -3,7 +3,7 @@
     <div class="aboutBox">
       <div class="colorBoxes">
         <div class="colorLeft">
-          <img src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/41382349_957106404500012_6675097343760531456_o.jpg?_nc_cat=104&_nc_sid=174925&_nc_ohc=0Pz1FfUf72UAX_K5eql&_nc_ht=scontent-sea1-1.xx&oh=3a3374ca2db9cc08ee224c9632f7cda9&oe=5F018D69" alt="Photo of Nigel and is dog, Hudson">
+          <img src="https://scontent.ftpa1-2.fna.fbcdn.net/v/t1.0-9/41382349_957106404500012_6675097343760531456_o.jpg?_nc_cat=104&ccb=2&_nc_sid=174925&_nc_ohc=-7GJJZh9AQ0AX_aDo4o&_nc_ht=scontent.ftpa1-2.fna&oh=2c4aeae64ea53d3f63cec824af919da7&oe=5FEAE6E9" alt="Photo of Nigel and is dog, Hudson">
         </div>
         <div class="colorRight">
           <ul class="list">
