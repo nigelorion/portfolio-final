@@ -11,7 +11,7 @@
         </div>
         <div class="hidden">
           <a class="hiddenLinks" target="_blank" href="https://github.com/nigelorion/hbailey">code</a>
-          <a class="hiddenLinks" target="_blank" href="http://hbailey.boutique">live</a>
+          <a class="hiddenLinks" target="_blank" href="https://nigelorion.github.io/hbailey/">live</a>
         </div>
       </div>
       <div class="projectWrapper">
