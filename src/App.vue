@@ -4,8 +4,8 @@
       <button v-on:click="aboutToggle()" type="button" name="button">about</button>
       <button v-on:click="portfolioToggle()" type="button" name="button">portfolio</button>
       <h1>nigel orion</h1>
-      <p>web developer</p>
-      <p>pdx</p>
+      <p>engineer</p>
+      <p>st petersburg, fl</p>
     </div>
     <div class="center sections">
       <transition name="slide-fade" mode="out-in">
