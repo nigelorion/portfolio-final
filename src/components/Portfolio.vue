@@ -20,6 +20,7 @@
           <p>ReactJS</p>
         </div>
         <div>
+          <p style="color: red; font-style: italic; font-size: .8em;">Currently down due to API issues</p>
           <p class="aboutProject">A simple widget utilizing multiple APIs to display air quality and weather data.</p>
         </div>
         <div class="hidden">
