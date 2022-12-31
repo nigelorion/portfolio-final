@@ -9,12 +9,12 @@
     "deploy": "node ./node_modules/vue-gh-pages/index.js"
   },
   "dependencies": {
-    "@vue/cli-plugin-eslint": "^4.5.9",
-    "@vue/cli-service": "^4.5.9",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/cli-service": "^5.0.8",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.14.0",
     "eslint-plugin-vue": "^6.2.2",
-    "sass-loader": "^8.0.2",
+    "sass-loader": "^13.2.0",
     "vue": "^2.6.12"
   },
   "devDependencies": {
